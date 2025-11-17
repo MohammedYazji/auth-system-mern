@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import connectDB from "./db/connect.js";
 
 // init my app, and read env //
 dotenv.config();
@@ -11,7 +12,8 @@ const PORT = process.env.PORT || 8000;
 app.use(cors()); // enable cors [unblock request from client domain]
 app.use(express.json()); // enable read json
 
-// run my application //
+// run my application, and connect to DB //
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
+  connectDB();
 });

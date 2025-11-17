@@ -2,7 +2,7 @@
   "name": "auth-system-mern",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
     "dev": "nodemon server/server.js"
   },
